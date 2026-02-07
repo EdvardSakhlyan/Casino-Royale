@@ -1,0 +1,45 @@
+.preventionsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 1200px) {
+    flex-direction: row;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+
+  .prevention {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .preventionText {
+      font-weight: 400;
+      line-height: 22px;
+      color: #fbfbfbb2;
+      width: 287px;
+
+      @media (max-width: 1440px) {
+        width: 233px;
+      }
+
+      @media (max-width: 1200px) {
+        width: 287px;
+      }
+    }
+
+    .iconWrapper {
+      width: 58px;
+      height: 58px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+  padding: 16px;
+
+  background-image: url("../../assets/mainBg.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  .logoWrapper {
+    height: 120px;
+    margin-bottom: 48px;
+  }
+
+  .previewWrapper {
+    width: 362px;
+    height: 200px;
+    margin-bottom: 32px;
+  }
+
+  .buttonWrapper {
+    width: 358.5px;
+
+    @media (max-width: 375px) {
+      button {
+        width: 343px;
+      }
+    }
+  }
+}

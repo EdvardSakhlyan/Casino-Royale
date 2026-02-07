@@ -1,0 +1,13 @@
+.maskotWrapper {
+  width: 288px;
+  height: 288px;
+
+  @media (max-width: 1440px) {
+    width: 240px;
+    height: 240px;
+  }
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
