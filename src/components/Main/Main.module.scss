@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  flex: 1;
   padding: 16px;
 
   background-image: url("../../assets/mainBg.png");
@@ -14,14 +13,17 @@
 
   @media (min-width: 375px) {
     min-height: 854px;
+    height: 854px;
   }
 
   @media (min-width: 1440px) {
     min-height: 910px;
+    height: 910px;
   }
 
   @media (min-width: 1920px) {
     min-height: 944px;
+    height: 944px;
   }
 
   .logoWrapper {
