@@ -24,7 +24,7 @@ const LanguageSelect = ({ onChange }: { onChange: (code: string) => void }) => {
         </span>
         <span className={styles.label}>{selected.label}</span>
         <span className={`${styles.arrow} ${open ? styles.open : ""}`}>
-          <img src={arrowIcon} />
+          <img src={arrowIcon} alt="arrow" />
         </span>
       </button>
 

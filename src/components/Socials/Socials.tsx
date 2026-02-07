@@ -18,6 +18,7 @@ const Socials = () => {
           className={styles.socialsIcon}
           href="https://instagram.com"
           target="_blank"
+          rel="noreferrer"
         >
           <Image src={instagramIcon} alt="Instagram" />
         </a>
@@ -25,6 +26,7 @@ const Socials = () => {
           className={styles.socialsIcon}
           href="https://web.telegram.org"
           target="_blank"
+          rel="noreferrer"
         >
           <Image src={telegramIcon} alt="Telegram" />
         </a>
@@ -32,6 +34,7 @@ const Socials = () => {
           className={styles.socialsIcon}
           href="https://twitter.com"
           target="_blank"
+          rel="noreferrer"
         >
           <Image src={twitterIcon} alt="Twitter" />
         </a>
@@ -39,6 +42,7 @@ const Socials = () => {
           className={styles.socialsIcon}
           href="mailto:contact@example.com"
           target="_blank"
+          rel="noreferrer"
         >
           <Image src={emailIcon} alt="Email" />
         </a>

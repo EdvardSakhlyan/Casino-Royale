@@ -10,7 +10,7 @@ interface IImageProps {
 const Image = ({ ...props }: IImageProps) => {
   return (
     <div className={styles.imageWrapper}>
-      <img className={styles.image} {...props} />
+      <img className={styles.image} alt={props.alt || "image"} {...props} />
     </div>
   );
 };

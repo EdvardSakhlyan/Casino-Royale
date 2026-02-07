@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { i18nConfig } from "../constants";
 
