@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import Maskot from "../../ui/Maskot/Maskot";
 import DownloadBlock from "../DownloadBlock/DownloadBlock";
 import Preventions from "../Preventions/Preventions";
