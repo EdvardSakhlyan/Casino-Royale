@@ -12,9 +12,22 @@
   background-position: top;
   background-repeat: no-repeat;
 
+  @media (min-width: 375px) {
+    min-height: 854px;
+  }
+
+  @media (min-width: 1440px) {
+    min-height: 910px;
+  }
+
+  @media (min-width: 1920px) {
+    min-height: 944px;
+  }
+
   .logoWrapper {
     height: 120px;
     margin-bottom: 48px;
+    width: 264px;
   }
 
   .previewWrapper {
