@@ -1,12 +1,12 @@
 .downloadBlock {
   background-color: #0b0f2a;
-  width: 390px;
   border-radius: 16px;
   border: 1px solid #ff8d6b;
   border-style: dashed;
+  width: 320px;
 
-  @media (max-width: 375px) {
-    width: 320px;
+  @media (min-width: 480px) {
+    width: 390px;
   }
 
   .downloadContent {
