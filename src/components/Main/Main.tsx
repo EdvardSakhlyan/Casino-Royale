@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Logo, Preview, Button } from "../../ui";
@@ -24,35 +23,23 @@ const MainContent = ({ onClick }: { onClick: () => void }) => {
   );
 };
 
-const Main = () => {
-  const [open, setOpen] = useState(false);
-  const [isLoading, setLoading] = useState(false);
+interface IMainProps {
+  open: boolean;
+  isLoading: boolean;
+  onOpen: () => void;
+  onClose: () => void;
+  onLoad: () => void;
+}
 
-  const handleLoad = () => {
-    setLoading(false);
-  };
-
-  const handleOpen = () => {
-    setOpen((prev) => !prev);
-    setLoading(true);
-  };
-
-  const handleClose = () => {
-    setOpen((prev) => !prev);
-  };
-
+const Main = ({ onOpen, open, ...props }: IMainProps) => {
   return (
     <main className={styles.main}>
       {open ? (
         <div className={styles.casinoFrameWrapper}>
-          <CasinoFrame
-            onClose={handleClose}
-            onLoad={handleLoad}
-            isLoading={isLoading}
-          />
+          <CasinoFrame {...props} />
         </div>
       ) : (
-        <MainContent onClick={handleOpen} />
+        <MainContent onClick={onOpen} />
       )}
     </main>
   );

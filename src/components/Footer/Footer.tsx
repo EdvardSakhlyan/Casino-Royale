@@ -6,8 +6,12 @@ import { useGetWindowSize } from "../../hooks";
 
 import styles from "./Footer.module.scss";
 
-const Footer = () => {
+const Footer = ({ frameOpen }: { frameOpen: boolean }) => {
   const { is1440 } = useGetWindowSize();
+
+  if (frameOpen) {
+    return null;
+  }
 
   return (
     <footer className={styles.footer}>
