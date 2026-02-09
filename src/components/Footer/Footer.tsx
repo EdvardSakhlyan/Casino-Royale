@@ -7,18 +7,18 @@ import { useGetWindowSize } from "../../hooks";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
-  const { is1200 } = useGetWindowSize();
+  const { is1440 } = useGetWindowSize();
 
   return (
     <footer className={styles.footer}>
       <section className={styles.leftSection}>
-        {!is1200 && <Maskot />}
+        {!is1440 && <Maskot />}
         <DownloadBlock />
-        {is1200 && <LangAndSocials />}
+        {is1440 && <LangAndSocials />}
         <Preventions />
       </section>
 
-      {!is1200 && (
+      {!is1440 && (
         <section className={styles.rightSection}>
           <LangAndSocials />
         </section>

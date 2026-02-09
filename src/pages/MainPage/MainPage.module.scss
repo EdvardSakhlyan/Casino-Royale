@@ -1,8 +1,10 @@
 .mainWrapper {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  overflow: auto;
 
-  @media (min-width: 1440px) {
-    height: 100vh;
+  @media (max-width: 1439px) {
+    height: 100%;
   }
 }

@@ -23,7 +23,7 @@ const useGetWindowSize = () => {
   return {
     windowSize,
     is1200: windowSize.width <= 1200,
-    is1440: windowSize.width <= 1440,
+    is1440: windowSize.width < 1440,
   };
 };
 
