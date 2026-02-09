@@ -16,7 +16,7 @@ const MainContent = ({
   const { t } = useTranslation();
 
   return (
-    <>
+    <div className={styles.mainContentWrapper}>
       <div className={styles.logoWrapper}>
         <Logo />
       </div>
@@ -30,7 +30,7 @@ const MainContent = ({
           disabled={isLoaded}
         />
       </div>
-    </>
+    </div>
   );
 };
 
@@ -53,11 +53,13 @@ const Main = () => {
         <MainContent onClick={toggleOpen} isLoaded={isFrameLoaded} />
       )}
       {open ? (
-        <CasinoFrame
-          onClose={toggleOpen}
-          onLoad={handleLoad}
-          isLoaded={isFrameLoaded}
-        />
+        <div className={styles.casinoFrameWrapper}>
+          <CasinoFrame
+            onClose={toggleOpen}
+            onLoad={handleLoad}
+            isLoaded={isFrameLoaded}
+          />
+        </div>
       ) : (
         <MainContent onClick={toggleOpen} isLoaded={isFrameLoaded} />
       )}
