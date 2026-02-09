@@ -28,12 +28,8 @@
       color: #fbfbfbb2;
       width: 287px;
 
-      @media (max-width: 1440px) {
+      @media (min-width: 1440px) {
         width: 233px;
-      }
-
-      @media (max-width: 1439px) {
-        width: 287px;
       }
     }
 
