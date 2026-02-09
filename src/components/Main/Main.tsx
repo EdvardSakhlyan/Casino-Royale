@@ -6,13 +6,7 @@ import CasinoFrame from "../CasinoFrame/CasinoFrame";
 
 import styles from "./Main.module.scss";
 
-const MainContent = ({
-  onClick,
-  isLoaded,
-}: {
-  onClick: () => void;
-  isLoaded: boolean;
-}) => {
+const MainContent = ({ onClick }: { onClick: () => void }) => {
   const { t } = useTranslation();
 
   return (
@@ -24,11 +18,7 @@ const MainContent = ({
         <Preview />
       </div>
       <div className={styles.buttonWrapper}>
-        <Button
-          title={t("main.openButton")}
-          onClick={onClick}
-          disabled={isLoaded}
-        />
+        <Button title={t("main.openButton")} onClick={onClick} />
       </div>
     </div>
   );
@@ -36,32 +26,33 @@ const MainContent = ({
 
 const Main = () => {
   const [open, setOpen] = useState(false);
-  const [isFrameLoaded, setFrameLoaded] = useState(false);
+  const [isLoading, setLoading] = useState(false);
 
   const handleLoad = () => {
-    setFrameLoaded(true);
+    setLoading(false);
   };
 
-  const toggleOpen = () => {
+  const handleOpen = () => {
     setOpen((prev) => !prev);
-    setFrameLoaded(false);
+    setLoading(true);
+  };
+
+  const handleClose = () => {
+    setOpen((prev) => !prev);
   };
 
   return (
     <main className={styles.main}>
-      {open && !isFrameLoaded && (
-        <MainContent onClick={toggleOpen} isLoaded={isFrameLoaded} />
-      )}
       {open ? (
         <div className={styles.casinoFrameWrapper}>
           <CasinoFrame
-            onClose={toggleOpen}
+            onClose={handleClose}
             onLoad={handleLoad}
-            isLoaded={isFrameLoaded}
+            isLoading={isLoading}
           />
         </div>
       ) : (
-        <MainContent onClick={toggleOpen} isLoaded={isFrameLoaded} />
+        <MainContent onClick={handleOpen} />
       )}
     </main>
   );

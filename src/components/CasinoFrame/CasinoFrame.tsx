@@ -6,18 +6,21 @@ import styles from "./CasinoFrame.module.scss";
 const CasinoFrame = ({
   onClose,
   onLoad,
-  isLoaded,
+  isLoading,
 }: {
   onClose: () => void;
   onLoad?: () => void;
-  isLoaded?: boolean;
+  isLoading?: boolean;
 }) => {
   const { i18n } = useTranslation();
 
   return (
     <div
       className={styles.frameWrapper}
-      style={{ position: !isLoaded ? "absolute" : "relative" }}
+      style={{
+        position: !isLoading ? "absolute" : "relative",
+        display: isLoading ? "none" : undefined,
+      }}
     >
       <span className={styles.closeButton} onClick={onClose}>
         X
